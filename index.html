@@ -16,6 +16,9 @@
         rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <audio id="bgMusic" loop>
+        <source src="./Songs/LaguUlya.mp3.mp3" type="audio/mpeg">
+    </audio>
 </head>
 
 <body>
@@ -250,7 +253,9 @@
     let mailBox = document.querySelector('.mail')
     let boxmail = document.querySelector('.boxMail')
     var close = document.querySelector('.fa-xmark')
+    const audio = document.getElementById('bgMusic');
     mailBox.onclick = function () {
+        audio.play(); 
         mailBox.classList.toggle('active')
         boxmail.classList.add('active')
     }
